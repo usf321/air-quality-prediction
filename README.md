@@ -21,20 +21,6 @@ streamlit run app.py
 
 Then open http://localhost:8501 in your browser.
 
-Project Structure
-📁 air-quality-prediction/
-├ 📁 data/
-│   ├── raw/              # Orignal data
-│   └── processed/        # Cleaned data
-─ 📁 src/
-│   ├── data_collector.py    # Fetch data from API
-│   ├── preprocessing.py     # Clean & prepare data
-│   └── model.py            # Train ML models
-├── 📁 models/
-│   └── best_model.pkl      # Trained model
-├── app.py                  # Web app
-├── requirements.txt        # Dependencies
-└── README.md
 Results
 Model: Linear Regression
 Accuracy: R² = 0.97 (97% accurate)
