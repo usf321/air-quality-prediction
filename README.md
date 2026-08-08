@@ -1,14 +1,34 @@
-Air Quality Prediction System
+# Air Quality Prediction System
 
-A machine learning pipeline predicting PM2,5 levels and providing results in Streamlit dashboard.
+A machine learning pipeline predicting PM2.5 levels and providing results in Streamlit dashboard.
 
-Overview
+## Overview
 
 The project constructs a system for air quality prediction based on weather data. The system processes gathered information and trains a Linear Regression and Random Forests model, assessing their predictive performance.
 
-The model achieved an R² value of 0,97 on the validation sample using Random Forest method. Additionally, the system provides a live prediction dashboard made with Streamlit library, processes temperature range and day of the year values, and handles API or file related errors.
+The model achieved an R² value of 0.97 on the validation sample using Random Forest method. Additionally, the system provides a live prediction dashboard made with Streamlit library, processes temperature range and day of the year values, and handles API or file related errors.
 
-How it is structured
+---
+
+## 🖼️ Dashboard Screenshots
+
+**Screenshot 1: Home Page & Main Prediction**
+<img width="1568" height="751" alt="Solid_black svg" src="https://github.com/user-attachments/assets/478f227b-50f4-4316-a9d9-88f67a36107b" />
+
+
+**Screenshot 2: Weather Input & Parameters**
+![Input Summary](./screenshots/input_summary.png)
+
+**Screenshot 3: Model Information & How It Works**
+![Model Info](./screenshots/model_info.png)
+
+**Screenshot 4: Live App Running**
+![Live App](./screenshots/live_app.png)
+
+---
+
+## How it is structured
+
 The project directory is organized as follows:
 
 ├── .github/workflows/ # CI actions
@@ -19,30 +39,4 @@ The project directory is organized as follows:
 ├── README.md
 └── requirements.txt
 
-Model Performance
-
-Linear Regression
-Random Forest
-Training R² 0,95 0,98
-Validation R² 0,94 0,97
-MAE, µg/m³ ±1,42 ±0,76
-
-Note: On both data samples, the Random Forest demonstrated its ability to generalize better than Linear Regression achieving nearly two times lower prediction error.
-
-Getting Started
-
-To run the application, first, clone this repository and install the required dependencies:
-
-git clone https://github.com
-cd air-quality-prediciton
-virtualenv -p python3 venv
-source venv/bin/activate
-pip install -r requirements.txt
-
-Then, train the model
-
-python src/model.py
-
-Finally, launch the streamlit dashboard
-
-streamlit run app.py
+...rest of README
