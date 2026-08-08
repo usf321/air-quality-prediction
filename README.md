@@ -44,6 +44,7 @@ The project directory is organized as follows:
 ├── app.py # dashboard app
 ├── README.md
 └── requirements.txt
+
 Model Performance
 Linear Regression
 Random Forest
