@@ -80,3 +80,14 @@ Finally, launch the streamlit d
 
 versioun 1.0
 
+
+**UPDATE**
+
+**What the system does:**
+  what can it do now :
+1. Downloads 3 years of weather + air quality data from free APIs
+2. Cleans data and creates 3 engineered features
+3. Trains Linear Regression model (R²=0.97)
+4. Deploys interactive web dashboard
+5. Makes real-time PM2.5 predictions based on weather
+
