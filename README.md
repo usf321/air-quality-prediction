@@ -91,3 +91,4 @@ versioun 1.0
 4. Deploys interactive web dashboard
 5. Makes real-time PM2.5 predictions based on weather
 
+versioun 1.1
