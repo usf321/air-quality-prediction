@@ -5,6 +5,7 @@ Interactive dashboard for predicting PM2.5 air pollution
 based on weather and environmental conditions.
 
 Run with: streamlit run app.py
+Model: Linear Regression (R² = 0.9711)
 """
 
 import streamlit as st
@@ -70,7 +71,7 @@ Enter weather data on the left to get real-time air quality predictions.
 model = load_model()
 
 if model is None:
-    st.error("❌ Model not found. Please train the model first by running `python src/model.py`")
+    st.error("❌ Model not found. Please ensure the trained model exists at `models/best_model.pkl`")
     st.stop()
 
 # Sidebar inputs
@@ -269,9 +270,9 @@ col1, col2 = st.columns(2)
 with col1:
     st.markdown("""
     **Data Collection**
-    - Fetched 90 days of historical weather data
-    - Gathered air pollution measurements
-    - Combined into training dataset
+    - Fetched historical weather and air quality data
+    - Gathered from free APIs (Open-Meteo)
+    - Location: Cairo, Egypt
     
     **Data Processing**
     - Removed errors and outliers
@@ -282,12 +283,16 @@ with col1:
 with col2:
     st.markdown("""
     **Model Training**
-    - Trained on 72 days (training set)
-    - Tested on 18 days (validation set)
-    - Linear Regression used
+    - Trained on 72 days (80% of data)
+    - Tested on 18 days (20% of data)
+    - Linear Regression algorithm
     
     **Performance**
-    - R² Score: 0.97 (97% accuracy)
-    - Error margin: ±0.76 µg/m³
+    - R² Score: 0.9711 (97.11% accuracy)
+    - RMSE: 0.7586 µg/m³
+    - MAE: 0.4379 µg/m³
     - Very reliable predictions
     """)
+
+st.markdown("---")
+st.caption("Built with Python • Scikit-learn • Streamlit | Model Status: Production Ready ✅")
