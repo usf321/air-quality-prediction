@@ -270,14 +270,14 @@ col1, col2 = st.columns(2)
 with col1:
     st.markdown("""
     **Data Collection**
-    - Fetched historical weather and air quality data
-    - Gathered from free APIs (Open-Meteo)
+    - Collected 90 days of historical weather data
+    - Gathered air pollution measurements from APIs
     - Location: Cairo, Egypt
     
     **Data Processing**
     - Removed errors and outliers
-    - Created weather-based features
-    - Normalized values for ML
+    - Engineered 3 new features (temperature range, day of year, month)
+    - Normalized values for ML model
     """)
 
 with col2:
