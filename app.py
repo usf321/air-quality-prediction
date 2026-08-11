@@ -5,7 +5,8 @@ Interactive dashboard for predicting PM2.5 air pollution
 based on weather and environmental conditions.
 
 Run with: streamlit run app.py
-Model: Linear Regression (R² = 0.9711)
+Model: Linear Regression (R² = 0.9709)
+Dataset: 3 years of historical data (1091 days)
 """
 
 import streamlit as st
@@ -270,8 +271,8 @@ col1, col2 = st.columns(2)
 with col1:
     st.markdown("""
     **Data Collection**
-    - Collected 90 days of historical weather data
-    - Gathered air pollution measurements from APIs
+    - Collected 1091 days of historical weather data (~3 years)
+    - Generated synthetic air quality based on weather patterns
     - Location: Cairo, Egypt
     
     **Data Processing**
@@ -283,16 +284,16 @@ with col1:
 with col2:
     st.markdown("""
     **Model Training**
-    - Trained on 72 days (80% of data)
-    - Tested on 18 days (20% of data)
+    - Trained on 872 days (80% of data)
+    - Tested on 219 days (20% of data)
     - Linear Regression algorithm
     
     **Performance**
-    - R² Score: 0.9711 (97.11% accuracy)
-    - RMSE: 0.7586 µg/m³
-    - MAE: 0.4379 µg/m³
+    - R² Score: 0.9709 (97.09% accuracy)
+    - RMSE: 1.6071 µg/m³
+    - MAE: 1.2802 µg/m³
     - Very reliable predictions
     """)
 
 st.markdown("---")
-st.caption("Built with Python • Scikit-learn • Streamlit | Model Status: Production Ready ✅")
+st.caption("Built with Python • Scikit-learn • Streamlit | Model Status: under development | Data: Synthetic based on Cairo weather patterns")
