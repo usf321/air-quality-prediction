@@ -79,3 +79,40 @@ python src/model.py
 Finally, launch the streamlit d
 
 versioun 1.0
+---
+What's New in v1.1
+
+- **Stacking Ensemble Model** - Combined 4 base learners (Linear, Ridge, Lasso, ElasticNet) with meta-learner
+- **Improved Performance** - R² = 0.9715 (outperforms all individual models)
+- **Extended Dataset** - 1,091 days (~3 years) of historical weather data
+- **Production Ready** - Deployed live with interactive web UI
+
+
+**Learned Meta-Weights:**
+- Linear: 0.25
+- Ridge: 0.20
+- Lasso: 0.30
+- ElasticNet: 0.25
+
+## 🚀 Quick Start
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Train stacking model
+python src/stacking_model.py
+
+# Run web app
+streamlit run app.py
+```
+
+**v1.1** - Stacking Ensemble (Current)
+- Added 4-model stacking with meta-learner
+- Extended to 1,091 days data
+- R² improved to 0.9715
+
+**v1.0** - Single Model
+- Individual model implementations
+- 90 days initial data
+- R² = 0.9709
