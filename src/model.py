@@ -1,7 +1,7 @@
 """
 Model Training Module
 
-Trains two different ML models and picks the best one.
+train 4 models and use stacking 
 """
 
 import pandas as pd
